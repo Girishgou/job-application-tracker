@@ -22,11 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://postgres:1234@localhost:5432/job_tracker",
-)
-
+DATABASE_URL = os.environ["DATABASE_URL"]
 
 # ---------- Database ----------
 
