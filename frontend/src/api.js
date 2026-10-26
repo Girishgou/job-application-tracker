@@ -1,5 +1,5 @@
 // frontend/src/api.js
-const BASE_URL = 'http://127.0.0.1:8000/api';
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000/api';
 
 async function handleResponse(res) {
   if (res.status === 204) return null;
