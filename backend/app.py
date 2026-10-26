@@ -17,7 +17,7 @@ load_dotenv()
 app = FastAPI(title="Job Application Tracker")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows requests from any frontend (or specify your Vercel frontend URL)
+    allow_origins=["*"],  # Allows requests from your Vercel frontend and localhost
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
