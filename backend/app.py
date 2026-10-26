@@ -10,6 +10,10 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, field_validator
 from fastapi.middleware.cors import CORSMiddleware
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 app = FastAPI(title="Job Application Tracker")
 app.add_middleware(
     CORSMiddleware,
