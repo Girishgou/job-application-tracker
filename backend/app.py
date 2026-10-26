@@ -22,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DATABASE_URL = os.environ.get("DATABASE_URL")
+DATABASE_URL = (os.environ.get("DATABASE_URL") or "").replace("DATABASE_URL=", "").strip().strip("'\"")
 
 # ---------- Database ----------
 
@@ -54,9 +54,6 @@ def init_db():
                 updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
             )
         """)
-
-
-init_db()
 
 
 # ---------- Models ----------
