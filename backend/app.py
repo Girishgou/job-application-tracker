@@ -21,7 +21,7 @@ app.add_middleware(
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "https://job-application-tracker-z7sa.vercel.app",
-    "https://YOUR-NEW-FRONTEND.vercel.app",
+    "https://job-application-tracker-yrka.vercel.app",
 ], # Allows requests from your Vercel frontend and localhost
     allow_credentials=True,
     allow_methods=["*"],
